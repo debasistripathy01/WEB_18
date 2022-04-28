@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    //sort namees in ascending order
+
+    var employeeData = [{
+        name: "vijay",
+        designation: "FSD",
+        salary: 9
+    }, {
+        name: "aditya",
+        designation: "FRONTEND",
+        salaray: 6
+    }, {
+        name: "kishan",
+        designation: "BACKEND",
+        salaray: 12
+    }, ];
+
+    // sort salary in increasring order
+
+
+
+    employeeData.sort(function(a, b) {
+        if (a.name > b.name) {
+            return 1;
+        }
+        if (a.name < b.name) {
+            return -1;
+
+        }
+        return 0;
+    })
+
+    console.log(employeeData);
+</script>
