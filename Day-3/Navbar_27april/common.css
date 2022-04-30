@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    padding: 20px 10px 0px 10px;
+    background-color: darkblue;
+    color: white;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-top: 1%;
+}
+
+#logo {
+    width: 20%;
+}
+
+#text {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin-left: 40%;
+    text-align: right;
+}
+
+.user {
+    width: 20%;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+.user>div>a {
+    color: white;
+    text-decoration: none;
+}
