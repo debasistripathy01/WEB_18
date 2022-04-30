@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Users/apple/Desktop/WEB18/Day-2/localStorage/accessingKeys/common.css">
+    <style>
+        #navbar {
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div> <a href="/Users/apple/Desktop/WEB18/Day-2/localStorage/WE_15th_april/backend.html"> Backend</a></div>
+    <div> <a href="/Users/apple/Desktop/WEB18/Day-2/localStorage/WE_15th_april/frontend.html">Front end</a></div>
+    <form action="" id="investorForm">
+        <input type="text" placeholder="image URL" />
+        <input type="text" placeholder="input investor name" />
+        <input type="text" id="investor" placeholder="Investor Role" />
+        <input type="text" id="companylogo" placeholder="Input company Logo" />
+        <input type="submit" />
+    </form>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector("investorForm").addEventListener("submit", investorFunc());
+
+    var investorArr = [];
+
+    function investorsFunc() {
+        event.preventDefault();
+
+
+        //idOfForm.idOfinput.value
+
+        var investorObj = {
+            investorImg: investorForm.imgURL.value,
+            investorName: investorForm.name.value,
+            investorRole: investorForm.role.value,
+            investorCompanyLogo: investorForm.companylogo.value,
+        };
+
+        investorArr.push(investorObj);
+        console.log(investorArr);
+    }
+</script>

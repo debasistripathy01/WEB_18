@@ -1,0 +1,12 @@
+navbar {
+    display: flex;
+    font-size: 28px;
+    background-color: rgb(97, 222, 222);
+    justify-content: space-around;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}

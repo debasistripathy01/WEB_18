@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    // Numbers 
+    var str = "1389410";
+    var numbs = [1, 2, 4, 56, 3]; //these numbers are getting stored in string format
+
+    localStorage.setItem("luckyNumbers", JSON.stringify(numbs)); // getting the array in stringformat
+
+    var array = JSON.parse(localStorage.getItem("luckyNumbers"));
+    console.log(typeof numbs)
+    console.log(array)
+
+    // to change numbers from string to array we need to use JSON
+    //JSON.stringyfy()  to convert strings into array
+
+    var names = ["anurag", "mahesh", "ranveer"];
+
+    localStorage.setItem("studentNames", JSON.stringify(names));
+
+
+    var out = localStorage.getItem("studentNames"); //JSON
+    console.log(out);
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <button id="inc">Decreament</button>
+    <button id="dnc">Increament</button>
+</body>
+
+</html>
+
+<script>
+    var count;
+
+    if (localStrorage.getItem("counterValue") == null) {
+        count = 0;
+    } else {
+        count = localStorage.getItem("counterValue")
+    }
+    document.querySelector("h1").innerText = count;
+
+    document.querySelector("#inc").addEventListener("click", decFun);
+
+    function decFun() {
+        count--;
+        document.querySelector("h1").innerText = count;
+        localStorage.getItem("counterValue", count);
+    }
+
+    //or and || && operators
+
+
+    document.querySelector("dnc").addEventListener("click", incFun);
+
+    function incFun() {
+        count++;
+        document.querySelector("h1").innerHTML = count;
+
+    }
+
+    //output will be true when both condition  are true
+
+    // null is false value
+
+    console.log(true && true);
+    console.log(true && false);
+    console.log(false && true);
+
+
+    // var x = true;
+</script>
