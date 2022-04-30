@@ -19,8 +19,8 @@
     <div> <a href="/Users/apple/Desktop/WEB18/Day-2/localStorage/WE_15th_april/backend.html"> Backend</a></div>
     <div> <a href="/Users/apple/Desktop/WEB18/Day-2/localStorage/WE_15th_april/frontend.html">Front end</a></div>
     <form action="" id="investorForm">
-        <input type="text" placeholder="image URL" />
-        <input type="text" id="imgURL" placeholder="input investor name" />
+        <input type="text" id="imgURL" placeholder="image URL" />
+        <input type="text" id="name" placeholder="input investor name" />
         <input type="text" id="role" placeholder="Investor Role" />
         <input type="text" id="companylogo" placeholder="Input company Logo" />
         <input type="submit" />
@@ -33,7 +33,7 @@
 <script>
     document.querySelector("#investorForm").addEventListener("submit", investorsFunc);
 
-    var investorArr = [];
+    var investorArr = JSON.parse(localStorage.getItem("investorsData")) || [];
 
     function investorsFunc() {
         event.preventDefault();

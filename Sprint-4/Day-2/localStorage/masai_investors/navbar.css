@@ -1,14 +1,14 @@
-/* Navbar related css */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-#links {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1%;
-    box-shadow: 2px 2px 5px 5px rgb(235, 235, 235);
-}
+        /* Navbar related css */
+        
+        navbar {
+            display: flex;
+            font-size: 28px;
+            background-color: rgb(97, 222, 222);
+            justify-content: space-around;
+            padding: 10px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }

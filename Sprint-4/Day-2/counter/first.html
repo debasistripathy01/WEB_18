@@ -22,14 +22,14 @@
     if (localStrorage.getItem("counterValue") == null) {
         count = 0;
     } else {
-        count = localStorage.getItem("counterValue")
+        count = localStorage.getItem("counterValue");
     }
     document.querySelector("h1").innerText = count;
 
-    document.querySelector("#inc").addEventListener("click", decFun);
+    document.querySelector("#inc").addEventListener("click", incFun);
 
-    function decFun() {
-        count--;
+    function incFun() {
+        count++;
         document.querySelector("h1").innerText = count;
         localStorage.getItem("counterValue", count);
     }
@@ -37,10 +37,10 @@
     //or and || && operators
 
 
-    document.querySelector("dnc").addEventListener("click", incFun);
+    document.querySelector("dnc").addEventListener("click", decFun);
 
-    function incFun() {
-        count++;
+    function decFun() {
+        count--;
         document.querySelector("h1").innerHTML = count;
 
     }
@@ -49,9 +49,9 @@
 
     // null is false value
 
-    console.log(true && true);
-    console.log(true && false);
-    console.log(false && true);
+    // console.log(true && true);
+    // console.log(true && false);
+    // console.log(false && true);
 
 
     // var x = true;

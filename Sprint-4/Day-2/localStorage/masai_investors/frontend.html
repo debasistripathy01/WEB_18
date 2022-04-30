@@ -6,13 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 20px;
+        }
+        
+        p+img {
+            height: 50px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="navbar">
-        <div></div>
-        <div></div>
-    </div>
+    <div id="container"></div>
+    <h1>frontend</h1>
 </body>
 
 </html>
+<script>
+    var investorsData = JSON.parse(localStorage.getItem("investorsData"));
+    console.log(investorsArr);
+
+
+
+    investorsArr.forEach(function(elem) {
+        var box = document.createElement("div");
+
+
+        var avatar = document.createElement("img");
+        avatar.setAttribute("src", elem.imgURL);
+        var name = document.createElement("h3");
+        name.innerText = elem.name;
+
+        var role = document.createElement("p");
+        role.innerText = elem.role;
+
+        var logo = document.createElement("img");
+        logo.setAttribute("src", elem.companylogo);
+
+        box.append(avatar, name, role, logo);
+        document.querySelector("#container").append("box");
+    });
+</script>
