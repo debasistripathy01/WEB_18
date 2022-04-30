@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="data.html">
 </head>
 
 <body>
@@ -22,7 +23,41 @@
 
 </html>
 <script>
-    let product = data[{}, {}, {}, {}, ];
+    let product = data[
+
+        {
+            brand: "Puma",
+            name: "selena floral FileList",
+            price: "2000",
+            size: "X,XX,XXL",
+            productID: "women1",
+            catagory: "Casual",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/t/w/twentydressesmix_dr0935_1_984da863.jpg?rnd=20200526195200",
+        }, {
+            brand: "Gap",
+            name: "balck bella",
+            price: "1347",
+            size: "X,M,L,XX,XXL",
+            productID: "women2",
+            catagory: "festive",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/1/4/146117301_1_7fcd0574.jpg?rnd=20200526195200",
+        }, {
+            brand: "Puma",
+            name: "chil pill supersoft palysuit",
+            price: "799",
+            size: "M,L,XX,XXS",
+            productID: "women3",
+            catagory: "party",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/a/c/achwsivc466_1_a6c9da54.jpg?rnd=20200526195200",
+        }, {
+            brand: "Gap",
+            name: "plus size womens",
+            price: "2000",
+            size: "X,M,L,XXS,XXL",
+            productID: "women4",
+            catagory: "formal",
+            img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/i/n/ind158-pnk_1_3dc181e4.jpg?rnd=20200526195200",
+        }];
 
     localStorage.setItem("masai-ecomm", JSON.stringify(product));
     let cartLSData = localStorage.JSON.parse(localStorage.getItem("masai-cart")) || [];

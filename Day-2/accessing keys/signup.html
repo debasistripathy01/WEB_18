@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="common.css" />
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        form {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div><a href="mens.html">Mens</a></div>
+        <div><a href="womens.html">Womens</a></div>
+        <div><a href="login.html">Login</a></div>
+        <div><a href="signup.html">Signup</a></div>
+    </div>
+    <h1>Signup</h1>
+    <form action="" id="form">
+        <input type="text" placeholder="User Name" id="user">
+        <input type="text" placeholder="Password" id="passwd">
+        <input type="text" placeholder="Email" id="mail">
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
+
+<script>
+    // localStorage.setItem("email", "vchandu111@gmail.com");
+
+
+    // localStorage.setItem("investorsData", JSON.stringify(investors))
+
+    var form = document.querySelector("#form");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var userData = {
+            UserName: form.user.value,
+            Password: form.passwd.value,
+            Email: form.mail.value,
+        };
+        localStorage.setItem("Username", JSON.stringify(userData));
+
+    });
+</script>

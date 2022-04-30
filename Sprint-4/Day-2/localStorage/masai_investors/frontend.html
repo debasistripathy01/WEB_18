@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="html" href="backend.html">
     <style>
         #container {
             display: grid;
@@ -29,11 +30,11 @@
 </html>
 <script>
     var investorsData = JSON.parse(localStorage.getItem("investorsData"));
-    console.log(investorsArr);
+    console.log(investorArr);
 
 
 
-    investorsArr.forEach(function(elem) {
+    investorArr.forEach(function(elem) {
         var box = document.createElement("div");
 
 
