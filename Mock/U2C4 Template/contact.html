@@ -10,6 +10,8 @@
 </head>
 
 <body>
+
+
     <div id="links">
         <div><a href="index.html">Home</a></div>
         <div><a href="contact.html">Contact List</a></div>
@@ -26,6 +28,12 @@
                 </tr>
             </thead>
             <tbody id="body">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
                 <!-- Append your output to tbody -->
             </tbody>
         </table>
@@ -66,7 +74,7 @@
             tr.append(td1, td2, td3, td4);
             document.querySelector("body").append("tr");
 
-            contactArr.forEach(elem)
+            // contactArr.forEach(elem)
 
         });
     }
@@ -76,6 +84,7 @@
 
         contactArr.push(elem);
         localStorage.setItem("favourites", JSON.stringify(contactArr));
+        // localStorage.setItem()
     }
 
     //code your js part here
