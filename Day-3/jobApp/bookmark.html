@@ -60,11 +60,11 @@
 
             tr.append(td1, td2, td3, td4, td5);
 
-            document.querySelector("tbody").append("tr");
+            document.querySelector("body").append("tr");
         })
     }
 
-    function DeleteItem(elem, index) {
+    function DeleteFun(elem, index) {
         bookMarkArr.splice(index, 1);
         localStorage.setItem("bookmarks", JSON.stringify(bookMarkArr));
         window.location.reload()

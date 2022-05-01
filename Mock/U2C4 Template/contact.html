@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Database</title>
     <link rel="stylesheet" href="commonStyles.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="links">
-      <div><a href="index.html">Home</a></div>
-      <div><a href="contact.html">Contact List</a></div>
-      <div><a href="favourites.html">Favourites</a></div>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="contact.html">Contact List</a></div>
+        <div><a href="favourites.html">Favourites</a></div>
     </div>
     <main>
-      <table>
-        <thead>
-          <tr>
-            <th>Contact Name</th>
-            <th>Mobile Number</th>
-            <th>Type</th>
-            <th>Favourites</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Append your output to tbody -->
-        </tbody>
-      </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Contact Name</th>
+                    <th>Mobile Number</th>
+                    <th>Type</th>
+                    <th>Favourites</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                <!-- Append your output to tbody -->
+            </tbody>
+        </table>
     </main>
-  </body>
-  <script>
+</body>
+<script>
+    var contactArr = JSON.parse(localStorage.getItem("contactList"));
+
+    // console.log(contactArr);
+
+    displayData(contactArr)
+
+    function displayData(data) {
+        document.querySelector("body").innerHTML = "";
+
+
+        data.forEach(function(elem) {
+
+            var tr = document.createElement("tr");
+
+            var td1 = document.createElement("td");
+            td1.innerText = elem.userName
+
+            var td2 = document.createElement("td");
+            td2.innerText = elem.Number;
+
+            var td3 = document.createElement("td");
+            td3.innerText = elem.Type
+
+            var td4 = document.createElement("td");
+            td4.innerText = "Favourites"
+            td4.style.color = "blue";
+            td4.addEventListener("click", function() {
+                favouriteFunc(elem);
+                alert("Contact added as bookmark");
+
+            });
+            tr.append(td1, td2, td3, td4);
+            document.querySelector("body").append("tr");
+
+            contactArr.forEach(elem)
+
+        });
+    }
+
+    function favouriteFunc(elem) {
+        console.log(elem);
+
+        contactArr.push(elem);
+        localStorage.setItem("favourites", JSON.stringify(contactArr));
+    }
+
     //code your js part here
     //append your output to tbody
-  </script>
+</script>
+
 </html>

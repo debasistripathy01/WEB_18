@@ -138,7 +138,7 @@
 
 
     function displayData(data) {
-        document.querySelector("tbody").innerHTML = "";
+        document.querySelector("body").innerHTML = "";
 
         data.forEach(function(elem) {
             var tr = document.createElement("tr");
@@ -167,7 +167,7 @@
 
 
             tr.append(td1, td2, td3, td4, td5);
-            document.querySelector("tbody").append(tr);
+            document.querySelector("body").append(tr);
         });
     }
 
