@@ -20,23 +20,24 @@
 <script>
     var form = document.querySelector("#form");
 
+    var userData = JSON.parse(localStorage.getItem("userData"));
+
 
     form.addEventListener("submit", function(event) {
-        var userData = JSON.parse(localStorage.getItem("userData"));
+        event.preventDefault();
 
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
+        var data = {
+            email: form.email.value,
+            password: form.password.value,
+        }
 
-            var data = {
-                email: form.email.value,
-                password: form.password.value,
-            }
-
-            if (userData === null) {
-                alert(" Hey, DumbASs! create an account First");
-            } else if (userData.email == data.email && userData.password == data.password) {
-
-            }
-        });
+        if (userData === null) {
+            alert(" Hey! create an account First");
+            window.location.href = "signup.html" //Redirect to signup window
+        } else if (userData.email == data.email && userData.password == data.password) {
+            alert("signing is successful")
+            localStorage.setItem("signin", JSON.stringify(userData));
+            window.location.href = "products.html" //Redirect to products Window 
+        }
     });
 </script>

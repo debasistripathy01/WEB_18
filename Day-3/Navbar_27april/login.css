@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#form {
+    width: 50%;
+    margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: teal;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    display: block;
+    width: 40%;
+    background-color: lightblue;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 15px;
+}

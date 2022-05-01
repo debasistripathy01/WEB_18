@@ -7,6 +7,9 @@
     width: 50%;
     margin: auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: azure;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 
 h1 {
@@ -15,6 +18,9 @@ h1 {
 
 input {
     display: block;
+    width: 40%;
+    background-color: lightblue;
     margin: auto;
     font-size: 20px;
+    margin-top: 15px;
 }

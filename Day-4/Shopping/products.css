@@ -1,0 +1,15 @@
+.products {
+    display: grid;
+    margin: auto;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.products>div {
+    width: 500px;
+}
+
+.products img {
+    width: 100%;
+}

@@ -20,8 +20,40 @@
         <div><a href="signup.html">Signup</a></div>
     </div> -->
     <h1>Login</h1>
+    <form action="">
+        <input type="text" placeholder="user Name" id="userName">
+        <input type="text" placeholder="email" id="mail">
+        <input type="text" placeholder="password" id="passwd">
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 
 </html>
 <script>
+    var form = document.querySelector("form");
+
+    var userData = JSON.parse(localStorage.getItem("userData"))
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (userData == null) {
+            alert("please create an account first")
+            window.location.href = "signup.html"
+        } else if (userData.mail == dataSignin.Email && userData.passwd == dataSignin.Password) {
+            alert("Signing in is successful");
+            window.location.href = "products.html"
+            localStorage.setItem("signin", JSON.stringify(userData));
+        } else {
+            alert("account user name or password is wrong")
+            window.location.href = "login.html"
+        }
+
+        var dataSignin = {
+            userName: form.userName.value,
+            Email: form.mail.value,
+            Password: form.Passwd.value,
+        }
+    })
 </script>
