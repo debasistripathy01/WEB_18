@@ -40,3 +40,19 @@
     color: white;
     text-decoration: none;
 }
+
+.products {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.products img {
+    width: 100%;
+}
+
+.products>div {
+    width: 30%;
+}

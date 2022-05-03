@@ -40,7 +40,7 @@
 
 </html>
 <script>
-    let product = data[
+    let product = [
 
         {
             brand: "Puma",
@@ -74,10 +74,11 @@
             productID: "women4",
             catagory: "formal",
             img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/i/n/ind158-pnk_1_3dc181e4.jpg?rnd=20200526195200",
-        }];
+        }
+    ];
 
     localStorage.setItem("masai-ecomm", JSON.stringify(product));
-    let cartLSData = localStorage.JSON.parse(localStorage.getItem("masai-cart")) || [];
+    let cartLSData = JSON.parse(localStorage.getItem("masai-cart")) || [];
 
 
     var products = document.querySelector(".products");

@@ -15,8 +15,9 @@
             <h3>Rebook</h3>
         </div>
         <div id="text">
-            <div>Men</div>
-            <div>Women</div>
+            <div> <a href="products.html"> Men</a></div>
+
+            <div> <a href="products.html"> Women</a></div>
         </div>
         <div class="user">
             <div><a href="login.html">Login</a> </div>
@@ -26,3 +27,14 @@
 </body>
 
 </html>
+
+<script>
+    var user = document.querySelector(".user")
+    var signingData = JSON.parse(localStorage.getItem("signup"));
+
+
+    if (signingData !== null) {
+        user.innerHTML = `<div>User </div>
+            <div><a href="cart.html">Cart</a></div>`
+    }
+</script>

@@ -20,7 +20,7 @@
         <div><a href="signup.html">Signup</a></div>
     </div> -->
     <h1>Signup</h1>
-    <form action="" id="form">
+    <form>
         <input type="text" placeholder="First Name" id="firstName">
         <input type="text" placeholder="Last Name" id="lastName">
         <input type="text" placeholder="user Name" id="user">
@@ -32,19 +32,20 @@
 
 </html>
 <script>
-    var userData = document.querySelector("#form");
+    var form = document.querySelector("form");
 
-    userData.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         var data = {
-            firstName: userData.firstName.value,
-            lastName: userData.lastName.value,
-            userName: userData.user.value,
-            mail: userData.mail.value,
-            password: userData.passwd.value,
+            firstName: form.firstName.value,
+            lastName: form.lastName.value,
+            userName: form.user.value,
+            mail: form.mail.value,
+            password: form.passwd.value,
         };
-        localStorage.setItem("userData", JSON.stringify(data));
+        // console.log(data);
+        localStorage.setItem("form", JSON.stringify(data));
 
     })
 </script>
