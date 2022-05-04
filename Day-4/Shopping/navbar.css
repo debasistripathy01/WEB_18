@@ -25,4 +25,9 @@ body {
 
 .user {
     width: 30%;
+    display: flex;
+}
+
+.user>h2 {
+    margin: 20px;
 }
